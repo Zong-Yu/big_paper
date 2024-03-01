@@ -122,7 +122,7 @@ with placeholder6.container():
     with f1:
          explainer   = shap.TreeExplainer(RF)
          shap_values = explainer.shap_values(outputdf)
-         mpl.font_manager.fontManager.addfont('SimHei.ttf') 
+         mpl.font_manager.fontManager.addfont('simhei.ttf') 
          plt.rcParams['font.sans-serif'] = ['SimHei'] # 指定默认字体
          plt.rcParams['axes.unicode_minus'] = False
          st.write('SHAP力图')
