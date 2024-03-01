@@ -13,6 +13,7 @@ import lime
 from lime import lime_tabular
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import pickle
 
 plt.style.use('default')
@@ -121,6 +122,7 @@ with placeholder6.container():
     with f1:
          explainer   = shap.TreeExplainer(RF)
          shap_values = explainer.shap_values(outputdf)
+         mpl.font_manager.fontManager.addfont('SimHei.ttf') 
          plt.rcParams['font.sans-serif'] = ['SimHei'] # 指定默认字体
          plt.rcParams['axes.unicode_minus'] = False
          st.write('SHAP力图')
